@@ -1,0 +1,173 @@
+/*
+body.page-submit {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.portal-box {
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.portal-preview-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid #000;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portal-colors {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    width: 60px;
+    margin: 10px auto;
+    display: none;
+}
+*/
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+.left-corner-deco {
+    position: absolute;
+    bottom: 0px;
+    width: 228px;
+    height: 226px;
+    background-image: url('../assets/cornerDeco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.right-corner-deco {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 228px;
+    height: 226px;
+    transform: scaleX(-1);
+    background-image: url('../assets/cornerDeco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.portal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-left: 12%;
+    padding-top: 160px;
+}
+
+.portal-box {
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+}
+
+.portal-preview-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid #000;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portal-colors {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.p-color {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: 3px solid #000;
+    box-shadow: 2px 3px 0px rgba(0,0,0,0.4);
+}
+
+.changefile-btn {
+    width: 60%;
+}
+
+.finalupload-btn {
+    width: 65%;
+}
+
+.logo-area-submit {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Infinite spin animation for the loading icon */
+@keyframes spin { 100% { transform: rotate(360deg); } }
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    width: 60px;
+    margin: 10px auto;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .left-corner-deco {
+        display: none;
+    }
+
+    .right-corner-deco {
+        display: none;
+    }
+
+    .changefile-btn {
+        width: 70%;
+    }
+
+    .finalupload-btn {
+        width: 75%;
+    }
+
+    .logo-area-submit {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.75);
+    }
+}

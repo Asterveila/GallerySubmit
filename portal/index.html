@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Submit to Gallery</title>
+    <link rel="icon" type="image/x-icon" href="../assets/submitIcon.ico">
+    <link rel="stylesheet" href="../gallery.css">
+    <link rel="stylesheet" href="../submit.css">
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="page-submit"> 
+    
+    <a href="../index.html">
+        <img src="../assets/back.png" class="btn-back-corner" width="80px" alt="Back">
+    </a>
+
+    <div class="logo-area-submit">
+        <img src="../assets/submitLogo.png" width="700px" alt="GD Icon Gallery">
+    </div>
+
+    <div class="left-corner-deco"></div>
+    <div class="right-corner-deco"></div>
+
+    <div class="portal-container">
+        <div class="popup-box portal-box">
+            <h2 class="popup-title font-golden" style="margin-top: -10px;">Submit Icon</h2>
+            
+            <div class="file-drop-zone font-helvetica" id="gdiconDropZone">
+                <input type="file" id="gdiconUpload" accept=".gdicon" class="file-input">
+                <div class="drop-label" id="gdiconDropLabel">
+                    <span class="font-pusab" style="font-size: 1.2rem; -webkit-text-stroke: 1px black;">Upload .gdicon file</span>
+                </div>
+            </div>
+
+            <div id="previewSection" style="display: none; flex-direction: column; gap: 15px;">
+                <div class="portal-preview-box">
+                    <canvas id="portalCanvas" width="200" height="200"></canvas>
+                </div>
+                
+                <div class="portal-info font-pusab">
+                    <h3 id="p-name" class="font-pusab" style="font-size: 2.5rem; -webkit-text-stroke: 2px black; text-shadow: 5px 4px 0px rgba(0,0,0,0.3);">—</h3>
+                    
+                    <p id="p-author" style="font-size: 1.9rem; -webkit-text-stroke: 2px black; filter: drop-shadow(4px 3px 0px rgba(0,0,0,0.3));">by —</p>
+                    
+                    <p id="p-desc" class="font-helvetica" style="font-size: 0.9rem; color: #ddd; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; margin: 5px 0;">—</p>
+                    
+                    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 5px;">
+                        <span id="p-type" class="tag tag-cube">Cube</span>
+                        <span id="p-format" class="tag tag-vanilla">Vanilla</span>
+                    </div>
+
+                    <div class="portal-colors">
+                        <div class="p-color" id="pc-1"></div>
+                        <div class="p-color" id="pc-2"></div>
+                        <div class="p-color" id="pc-g"></div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                    <button class="gd-btn btn-blue font-pusab changefile-btn" id="btnChangeIcon" style="font-size: 1.7rem; margin-bottom: 8px;">Change Icon</button>
+                    <button class="gd-btn btn-green font-pusab finalsubmit-btn" id="btnFinalSubmit" style="font-size: 1.8rem;">Send to Server</button>
+                </div>
+
+                <img src="../assets/loadingCircle-hd.png" id="loadingSpinner" class="loading-spinner">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="feedbackPopup">
+        <div class="popup-box" style="max-width: 400px;">
+            <button class="popup-close" id="btnCloseFeedback"></button>
+            <h2 class="popup-title font-golden" id="fbTitle">Status</h2>
+            <p class="font-pusab" id="fbMessage" style="font-size: 1.2rem; -webkit-text-stroke: 1px black;"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.3.2/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="../iconRenderer.js"></script>
+    <script src="portal.js"></script>
+</body>
+</html>

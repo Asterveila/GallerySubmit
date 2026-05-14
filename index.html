@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Formatter</title>
+    <link rel="icon" type="image/x-icon" href="assets/formatterIcon.ico">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="submit.css">
+</head>
+<body class="page-submit"> 
+    <a href="https://iconsgallery.pages.dev/">
+        <img src="assets/back.png" class="btn-back-corner" width="80px" alt="Back">
+    </a>
+
+    <div class="logo-area">
+        <img src="assets/formatLogo.png" width="700px" alt="Submit Icon">
+    </div>
+
+    <main class="submit-main">
+        <div class="submit-container">
+
+            <div class="submit-grid">
+                <div class="submit-form-col">
+
+                    <section class="form-section" id="section-files">
+                        <h2 class="section-title font-golden fuck-me">Icon Files</h2>
+
+                        <p class="generate-hint font-helvetica">
+                            Please make sure to only submit your icons' HIGH QUALITY files!!!<br>
+                            Icon Gallery automatically ports downloaded icons to medium if the downloader wishes for it.
+                        </p>
+
+                        <div class="field-group font-pusab">
+                            <label class="field-label" for="pngUpload">Spritesheet PNG <span class="required">*</span></label>
+                            <div class="file-drop-zone font-helvetica" id="pngDropZone">
+                                <input type="file" id="pngUpload" accept=".png" class="file-input">
+                                <div class="drop-label" id="pngDropLabel">
+                                    <span>Drop your <strong>-uhd.png</strong> here, or click to browse</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field-group font-pusab">
+                            <label class="field-label" for="plistUpload">Plist File <span class="required">*</span></label>
+                            <div class="file-drop-zone font-helvetica" id="plistDropZone">
+                                <input type="file" id="plistUpload" accept=".plist,.xml" class="file-input">
+                                <div class="drop-label" id="plistDropLabel">
+                                    <span>Drop your <strong>-uhd.plist</strong> here, or click to browse</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field-group font-pusab" style="margin-top: 25px;">
+                            <label class="checkbox-wrap">
+                                <input type="checkbox" id="hasProjectFilesCheck">
+                                <span class="checkmark"></span>
+                                Include Project Files (Optional)
+                            </label>
+                        </div>
+                        <div class="field-group font-pusab" id="projectDropZoneContainer" style="opacity: 0.5; pointer-events: none; transition: opacity 0.2s;">
+                            <label class="field-label" for="projectUpload" style="font-size: 1rem; -webkit-text-stroke: 1px black;">Project Files (.psd, .pdn, etc.)</label>
+                            <div class="file-drop-zone font-helvetica" id="projectDropZone">
+                                <input type="file" id="projectUpload" class="file-input" multiple>
+                                <div class="drop-label" id="projectDropLabel">
+                                    <span>Drop your project files here, or click to browse</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="form-section" id="section-info">
+                        <h2 class="section-title font-golden">Icon Info</h2>
+
+                        <p class="generate-hint font-helvetica">
+                            All the info for your Icon's listing on the gallery!
+                        </p>
+
+                        <div class="field-group font-pusab">
+                            <label class="field-label" for="iconNameInput">Icon Name <span class="required">*</span></label>
+                            <input type="text" id="iconNameInput" class="text-input" placeholder="e.g. Cube X" maxlength="64">
+                        </div>
+
+                        <div class="field-row font-pusab">
+                            <div class="field-group">
+                                <label class="field-label" for="iconTypeSelect">Icon Type <span class="required">*</span></label>
+                                <select id="iconTypeSelect" class="gd-select gd-select--full">
+                                    <option value="">Select type...</option>
+                                    <option value="Cube">Cube</option>
+                                    <option value="Ship">Ship</option>
+                                    <option value="Ball">Ball</option>
+                                    <option value="UFO">UFO</option>
+                                    <option value="Wave">Wave</option>
+                                    <option value="Robot">Robot</option>
+                                    <option value="Spider">Spider</option>
+                                    <option value="Swing">Swing</option>
+                                    <option value="Jetpack">Jetpack</option>
+                                </select>
+                            </div>
+                            <div class="field-group">
+                                <label class="field-label" for="formatSelect">Format <span class="required">*</span></label>
+                                <select id="formatSelect" class="gd-select gd-select--full">
+                                    <option value="">Select format...</option>
+                                    <option value="vanilla">Vanilla</option>
+                                    <option value="more-icons">More Icons</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field-group font-pusab">
+                            <label class="field-label" for="authorInput">Your Name <span class="required">*</span></label>
+                            <input type="text" id="authorInput" class="text-input" placeholder="e.g. Asterveila" maxlength="64">
+                        </div>
+
+                        <div class="field-group font-pusab">
+                            <label class="checkbox-wrap">
+                                <input type="checkbox" id="isCollabCheck">
+                                <span class="checkmark"></span>
+                                This is a collab icon
+                            </label>
+                            <div class="collab-inputs" id="collabInputs" style="display:none">
+                                <label class="field-label field-label--sub">Collab Partners (one per line)</label>
+                                <textarea id="collabWith" class="text-input text-area" rows="3" placeholder="collaber1&#10;collaber2"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field-group font-pusab">
+                            <label class="field-label" for="descInput">Description</label>
+                            <textarea id="descInput" class="text-input text-area" rows="3" placeholder="Short description of your icon..." maxlength="256"></textarea>
+                        </div>
+                    </section>
+
+                    <section class="form-section" id="section-colors">
+                        <h2 class="section-title font-golden">Display Colors</h2>
+
+                        <p class="generate-hint font-helvetica">
+                            The colors you wish for your icon to default to on the Gallery's preview!
+                        </p>
+
+                        <div class="color-row">
+                            <div class="color-field-block font-pusab">
+                                <label class="field-label">Primary</label>
+                                <div class="color-swatch-wrap"><input type="color" id="col1Input" value="#FF0000"><div class="color-swatch" id="swatchP1" style="background:#FF0000"></div></div>
+                                <input type="text" id="col1Hex" class="text-input text-input--hex" value="#FF0000" maxlength="7">
+                            </div>
+                            <div class="color-field-block font-pusab">
+                                <label class="field-label">Secondary</label>
+                                <div class="color-swatch-wrap"><input type="color" id="col2Input" value="#FFFF00"><div class="color-swatch" id="swatchP2" style="background:#FFFF00"></div></div>
+                                <input type="text" id="col2Hex" class="text-input text-input--hex" value="#FFFF00" maxlength="7">
+                            </div>
+                            <div class="color-field-block font-pusab">
+                                <label class="field-label">Glow</label>
+                                <div class="color-swatch-wrap"><input type="color" id="glowInput" value="#FFFFFF"><div class="color-swatch" id="swatchGlow" style="background:#FFFFFF"></div></div>
+                                <input type="text" id="glowHex" class="text-input text-input--hex" value="#FFFFFF" maxlength="7">
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="submit-preview-col">
+                    <div class="preview-sticky preview-box-container">
+                        <h2 class="section-title font-golden">Preview</h2>
+                        
+                        <div class="preview-box" id="previewBox">
+                            <div class="preview-placeholder font-helvetica" id="previewPlaceholder">
+                                Upload a PNG + PLIST to preview your icon
+                            </div>
+                            <canvas id="previewCanvas" width="240" height="240" style="display:none;"></canvas>
+                        </div>
+
+                        <div class="preview-label-area" id="previewLabelArea" style="display:none">
+                            <p class="preview-icon-name font-pusab" id="previewIconName" style="font-size: 1.8rem; -webkit-text-stroke: 1.5px black;">—</p>
+                            <p class="preview-icon-author font-pusab" id="previewIconAuthor" style="filter: drop-shadow(1.5px 1.5px 0px rgba(0,0,0,0.5));">—</p>
+                        </div>
+
+                        <div class="preview-controls font-pusab">
+                            <label class="checkbox-wrap">
+                                <input type="checkbox" id="previewGlow">
+                                <span class="checkmark"></span>
+                                Show Glow
+                            </label>
+                        </div>
+
+                        <div class="generate-section">
+                            <div class="validation-errors font-helvetica" id="validationErrors" style="display:none"></div>
+                            
+                            <button class="gd-btn btn-green font-pusab" id="generateBtn" style="font-size: 1.5rem; padding: 6px 24px;">
+                                Generate .gdicon
+                            </button>
+
+                            <a href="portal/index.html" style="text-decoration: none; display: block; margin-top: 12px;">
+                                <button class="gd-btn btn-pink font-pusab" style="font-size: 1.5rem; padding: 6px 24px; width: 100%;">
+                                    Submit to Gallery
+                                </button>
+                            </a>
+                            
+                            <p class="generate-hint font-helvetica">
+                                To submit an icon to the Gallery, please first submit your icon files on the "Icon Files" panel, and fill up all necessary fields in the Icon Info and Icon Colors panels!<br><br>
+                                Once you're happy with your icon info, colors, and made sure the preview looks good, click the "Download .gdicon" button to download your icon file for submission!<br><br>
+                                Then, click on "Submit to Gallery" to head to the portal page.<br>
+                                On the portal page, simply upload your .gdicon file and send it over for review!
+                            </p>
+
+                            <button class="gd-btn btn-blue font-pusab" id="btnGuidelines" style="font-size: 1.7rem; padding: 6px 24px; width: 100%;">
+                                Submission Guidelines
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="popup-overlay" id="guidelinesPopup">
+        <div class="popup-box" style="max-width: 900px; width: 95%;">
+            <button class="popup-close" id="btnCloseGuidelines"></button>
+            <h2 class="popup-title font-golden">Submission Guidelines</h2>
+            
+            <div id="guidelinesContent" class="font-helvetica" style="overflow-y: auto; max-height: 50vh; text-align: left; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 8px; border: 4px solid rgba(0,0,0,0.3);">
+                </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.3.2/pixi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="iconRenderer.js"></script>
+<script src="submit.js"></script>
+</body>
+</html>
