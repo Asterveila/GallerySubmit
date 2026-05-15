@@ -156,7 +156,7 @@ body {
 .icon-grid.view-list .icon-card { display: grid; grid-template-columns: 200px 1fr; padding-left: 15px; gap: 0; border-bottom: 1px solid rgba(0,0,0,0.2); }
 
 .card-canvas-wrap { display: flex; align-items: center; justify-content: center; padding: 10px; }
-.icon-canvas { image-rendering: pixelated; max-width: 100%; }
+.icon-canvas { max-width: 100%; }
 
 .card-info { padding: 10px 14px; display: flex; flex-direction: column; justify-content: center; gap: 4px; text-align: center; }
 .view-list .card-info { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto auto; align-items: center; gap: 2px 14px; text-align: left; }
