@@ -85,7 +85,9 @@ async function processGdicon(file) {
 async function checkBanStatus(uuid) {
     if (!uuid) return null;
     try {
-        const res = await fetch('banned-users.json');
+        const res = await fetch('https://jester-overhear-unsavory.ngrok-free.dev/api/banned-users', {
+            headers: { 'ngrok-skip-browser-warning': 'true' }
+        });
         if (!res.ok) return null;
         const banList = await res.json();
         return banList[uuid] || null;
