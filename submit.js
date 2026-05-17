@@ -341,6 +341,13 @@ We recommend you join my (Sarah's) Discord Server to see updates on accepted/rej
 Failure to format your submission properly (Wrong icon format, wrong gamemode, medium quality files, etc) will most likely get your submission rejected.
 Again, join the discord to know the reason your submission was rejected so you can re submit!
 
+## - No Pre-Colored/Non-Customizable (Colorable) Icons
+The Gallery is meant to hold icons that everyone can enjoy in their own clients, with their own colors, along with their own icon sets and enjoy them however they'd like.
+Please do NOT submit icons that can't be colored by the Player's chosen colors such as (but not limited to):
+- PNG images slapped on top of icons
+- Icons that are pre-colored (pre-coloring only specific parts of an icon is fine as long as its on the extra layer)
+- Icons that are just an image in place
+
 # Guidelines [ESP]
 Icon Gallery es un proyecto bastante sencillo, por lo que las normas también lo son.
 El incumplimiento de cualquiera de estas normas dará lugar al rechazo de tus iconos.
@@ -365,6 +372,13 @@ Te recomendamos que te unas a mi (de Sarah) servidor de Discord para ver las act
 ## - Formatea tu envío correctamente
 Si no formateas tu envío correctamente (formato de icono incorrecto, modo de juego incorrecto, archivos de calidad media, etc.), lo más probable es que tu envío sea rechazado.
 Una vez más, ¡únete al Discord para saber por qué se rechazó tu envío y así poder volver a enviarlo!
+
+## - No se admiten iconos precoloreados ni no personalizables (que no se puedan colorear)
+La Galería está pensada para albergar iconos que todo el mundo pueda disfrutar en sus propios clientes, con sus propios colores, junto con sus propios conjuntos de iconos, y disfrutarlos como mejor les parezca.
+Por favor, NO envíes iconos que no puedan colorearse con los colores elegidos por el jugador, tales como (entre otros):
+- Imágenes PNG superpuestas sobre los iconos
+- Iconos precoloreados (se permite precolorear solo partes específicas de un icono siempre que se haga en la capa 'extra')
+- Iconos que son simplemente una imagen colocada en su lugar
 `;
 
 function parseMarkdown(md) {
