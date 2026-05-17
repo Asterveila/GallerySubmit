@@ -140,7 +140,7 @@ async function submitToServer() {
 
         if (!response.ok) throw new Error(await response.text());
 
-        showFeedback("Success!", "Your icon has been added to the queue for review!");
+        showFeedback("Success!", "Your icon has been added to the queue for review! \n\nPlease be patient for your icon to be reviewed. You won't see your icon on the gallery IMMEDIATELY, as every icon has to be reviewed and accepted by the Gallery Moderation team. \n\nWe recommend you join our discord so you can see which icons were accepted and which were denied!");
         
         document.getElementById('previewSection').style.display = 'none';
         document.getElementById('gdiconDropZone').style.display = 'block';
