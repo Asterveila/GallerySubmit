@@ -85,7 +85,7 @@ async function processGdicon(file) {
 async function checkBanStatus(uuid) {
     if (!uuid) return null;
     try {
-        const res = await fetch('https://jester-overhear-unsavory.ngrok-free.dev/api/banned-users', {
+        const res = await fetch('https://expiration-hit-supplier-manufacturer.trycloudflare.com/api/banned-users', {
             headers: { 'ngrok-skip-browser-warning': 'true' }
         });
         if (!res.ok) return null;
@@ -133,7 +133,7 @@ async function submitToServer() {
         const formData = new FormData();
         formData.append("iconData", currentIconPayload.file);
         
-        const response = await fetch("https://jester-overhear-unsavory.ngrok-free.dev/api/submit", { 
+        const response = await fetch("https://expiration-hit-supplier-manufacturer.trycloudflare.com/api/submit", { 
             method: "POST", 
             body: formData 
         });
